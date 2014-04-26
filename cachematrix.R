@@ -41,22 +41,11 @@ cacheSolve <- function(x, ...) {
 
 
 
-cachemean <- function(x, ...) {
-  m <- x$getmean()
-  if(!is.null(m)) {
-    message("getting cached data")
-    return(m)
-  }
-  data <- x$get()
-  m <- mean(data, ...)
-  x$setmean(m)
-  message("display the mean")
-  m
-}
-
 
 ## For testing the functions: 
 ## x <- matrix(1:4,2,2)
 ## x
 ## cacheSolve(makeCacheMatrix(x)) %*% x # is the identity matrix
+
+
 
